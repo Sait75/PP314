@@ -68,13 +68,6 @@ public class User implements UserDetails {
         this.password = password;
     }
 
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
 
     public void setName(String name) {
         this.name = name;
