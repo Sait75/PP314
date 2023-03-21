@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import ru.kata.spring.boot_security.demo.entities.Role;
 import ru.kata.spring.boot_security.demo.entities.User;
 import ru.kata.spring.boot_security.demo.repositories.UserRepository;
+
+import javax.transaction.Transactional;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
@@ -27,6 +29,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
     }
 
     @Override
+    @Transactional
     public UserDetails loadUserByUsername(String username) {
         User user = findByUsername(username);
 
